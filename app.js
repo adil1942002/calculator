@@ -1,5 +1,7 @@
-var inp = document.getElementById("inp");
+let inp = document.getElementById("inp");
+let arr = [];
 function btn(num){
+arr.push(num)
 inp.value += num;
 }
 function resalt(){
@@ -9,3 +11,11 @@ function resalt(){
 function clearall(){
 inp.value = " ";
 }
+function del(){
+    inp.value = " ";
+    arr.pop();
+    arr.forEach((x)=>{
+        inp.value += x;
+
+    })
+    }
